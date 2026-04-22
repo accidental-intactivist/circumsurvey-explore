@@ -111,4 +111,4 @@ export const FINDINGS_URL = "https://findings.circumsurvey.online";
 // API base — same origin (findings) since the Worker is routed to
 // findings.circumsurvey.online/api/*. Explore fetches cross-origin,
 // relying on the Worker's permissive CORS headers.
-export const API_BASE = "https://circumsurvey-api.c4charkey.workers.dev/api";
+export const API_BASE = "https://findings.circumsurvey.online/api";
