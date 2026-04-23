@@ -1,15 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
-    // Match findings build output
     outDir: 'dist',
-    emptyOutDir: true,
-    sourcemap: false,
+    // Inline small assets to reduce requests
+    assetsInlineLimit: 4096,
   },
-  server: {
-    port: 5174, // different from findings' 5173 to allow running both locally
-  },
-});
+})
